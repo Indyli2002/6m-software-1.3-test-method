@@ -25,6 +25,12 @@ function convert(keyArr, valueArr){
         - Step 3: Within the for-loop, add the key and value to the local scoped object.
         - Step 4: Write a return statement to return the object literal after the for-loop code block.
     */
+    const objResults = {};
+    for (let i = 0; i < keyArr.length; i++) {
+        objResults[keyArr[i]] = valueArr[i];
+    }
+    return objResults;    
+
 }
 
 function printByKey(key){
@@ -33,6 +39,7 @@ function printByKey(key){
 
 booksObj = convert(bookIdArr, bookTitle);
 printByKey("NLB2"); // prints "Progamming for Dummies"
+console.log(booksObj);  //just to see everything printed
 
 // Ignore the code below this line
 module.exports = {
